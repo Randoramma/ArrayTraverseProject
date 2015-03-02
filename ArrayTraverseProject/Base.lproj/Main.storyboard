@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="ArrayTraverseProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +17,87 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="testOutlet" borderStyle="roundedRect" textAlignment="center" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="npD-6l-Gjm">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <color key="textColor" red="0.1450980392" green="0.28235294119999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="16" y="162" width="368" height="30"/>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXu-18-iLn">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="iteration:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ihx-Ww-ikQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7V-3y-aP6">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="iteration:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="e0U-SK-yMm"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="aXu-18-iLn" secondAttribute="centerY" constant="101" id="379-PZ-BxW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aXu-18-iLn" secondAttribute="trailing" constant="107" id="FnF-mg-FyG"/>
+                            <constraint firstAttribute="width" secondItem="npD-6l-Gjm" secondAttribute="width" id="PIO-Ry-9qA"/>
+                            <constraint firstAttribute="centerX" secondItem="npD-6l-Gjm" secondAttribute="centerX" id="gcH-JI-Lxs"/>
+                            <constraint firstAttribute="centerY" secondItem="n7V-3y-aP6" secondAttribute="centerY" constant="101" id="smr-Mh-lTw"/>
+                            <constraint firstItem="npD-6l-Gjm" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="142" id="tmP-1X-ZFe"/>
+                            <constraint firstItem="n7V-3y-aP6" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="89" id="udv-zL-pvi"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="npD-6l-Gjm"/>
+                                <exclude reference="aXu-18-iLn"/>
+                                <exclude reference="n7V-3y-aP6"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="PIO-Ry-9qA"/>
+                                <exclude reference="gcH-JI-Lxs"/>
+                                <exclude reference="tmP-1X-ZFe"/>
+                                <exclude reference="smr-Mh-lTw"/>
+                                <exclude reference="udv-zL-pvi"/>
+                                <exclude reference="379-PZ-BxW"/>
+                                <exclude reference="FnF-mg-FyG"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="npD-6l-Gjm"/>
+                                <include reference="aXu-18-iLn"/>
+                                <include reference="n7V-3y-aP6"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="PIO-Ry-9qA"/>
+                                <include reference="gcH-JI-Lxs"/>
+                                <include reference="tmP-1X-ZFe"/>
+                                <include reference="smr-Mh-lTw"/>
+                                <include reference="udv-zL-pvi"/>
+                                <include reference="379-PZ-BxW"/>
+                                <include reference="FnF-mg-FyG"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="myLeftButton" destination="n7V-3y-aP6" id="jE1-Xd-l7r"/>
+                        <outlet property="myRightButton" destination="aXu-18-iLn" id="sNP-Mg-JQq"/>
+                        <outlet property="textOutput" destination="npD-6l-Gjm" id="UU2-6a-cy3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="315" y="384.75"/>
         </scene>
     </scenes>
 </document>
